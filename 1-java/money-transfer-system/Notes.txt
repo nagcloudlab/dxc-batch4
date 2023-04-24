@@ -1,0 +1,82 @@
+
+
+    ----------------------------
+    design & performance issues
+    ----------------------------
+    - dependent & dependency object are tightly-coupled
+    - unit-testing not possible
+    - too many dependency objects created / destroyed by GC
+
+    ----------------------------
+    why these issues ?
+    ----------------------------
+
+    - dependent-object managing it's own dependency
+
+    -----------------------------
+    Solution
+    -----------------------------
+
+    -> Don't create dependency-object in dependent's home/class, get from Factory  ( Factory-Method Pattern )
+
+
+    -----------------------------
+    Limitation with Factory-pattern only
+    -----------------------------
+
+    -> Factory Location tight-coupling
+    -> Factory not restricting duplicate dependency instance creation
+
+
+    -----------------------------
+    Best Solution
+    -----------------------------
+
+    -> Don't create dependency-object in dependent's home/class, Don't get from Factory directly,
+       inject by 'third-party'  ( Dependency Inversion Principle ) A.k.a ( Inversion Of Control )
+
+       How to implement IOC ?
+
+       -> Dependency Injection ( DI )
+
+            -> constructor ( required dependency )
+            -> method ( optional dependency )
+
+----------------------------------------------------------------------------------
+
+OO concepts
+
+    - Interface / Abstraction
+    - Implementation / Encapsulation
+    - Inheritance
+    - Polymorphism
+
+----------------------------------------------------------------------------------
+
+OO design principles ( SOLID Principles )
+
+    The Single Responsibility Principle
+    The Open-Closed Principle
+    The Liskov Substitution Principle
+    The Interface Segregation Principle
+    The Dependency Inversion Principle
+
+
+------------------------------------------------------------------------------------
+OO design patterns
+------------------------------------------------------------------------------------
+
+    - ready solutions for common re-occrring problems with objects
+
+
+        - creational
+        - structural
+        - behavior
+
+        20+ patterns
+
+-----------------------------------------------------------------------------------
+
+
+
+
