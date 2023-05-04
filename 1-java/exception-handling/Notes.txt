@@ -1,0 +1,29 @@
+
+
+
+
+exception
+--------------
+
+=> unexpected program flow distrub
+
+e.g
+
+    - array index out of bounds
+    - null pointer
+    - file not found
+    ....
+
+
+2 types of throwable
+
+    - Error      ( terminate out process , e.g OutOfMemory )
+    - Exception  ( by handling cont.. our execution e.g AccountBalanceException)
+
+        - CheckedException
+        - UnCheckedException
+
+
+
+
+

@@ -1,0 +1,46 @@
+
+
+
+style of programming
+-----------------------
+
+
+1. imperative style
+
+    => solving any problem step-by-step
+
+        - intention + implementation mixed together
+
+2. declarative style
+
+        - separate intention & implementation
+
+
+-----------------------------------------------------------
+
+in java , 2 first-class citizens
+
+    - values / primitives
+    - objects / references
+
+    from java-8
+
+    - function / Lambda Expression
+
+     Predicate greenApplePredicate = (Apple apple) -> {
+                    return apple.getColor().equals("green");
+                }
+
+--------------------------------------------------------
+
+declarative style + function => Functional Programming
+
+--------------------------------------------------------
+
+
+
+why do we need functional programming java>
+
+=> to write compact && concise code
+
+--------------------------------------------------------

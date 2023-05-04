@@ -7,9 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="play-with-java" />
+        <module name="pattern-matching" />
         <module name="shop-IT" />
+        <module name="exception-handling" />
+        <module name="FP-in-java" />
         <module name="design-patterns" />
         <module name="transfer-service" />
+        <module name="concurrency" />
       </profile>
     </annotationProcessing>
   </component>

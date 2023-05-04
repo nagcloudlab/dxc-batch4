@@ -1,0 +1,32 @@
+
+
+
+process :
+
+    => whole execution in OS
+    => each process has private-memory
+
+thread  :
+
+    => independent execution within process
+    => one process can have threads
+    => threads share same memory with process
+
+
+
+----------------------------------------------------------
+
+
+java 1.5 and above
+
+
+ => Executor Framework  ( i.e Thread Pool ) => simplify thread management
+ => Lock Api
+ => Fork-Join Framework
+ => Concurrent Collections
+
+
+
+----------------------------------------------------------
+
+
