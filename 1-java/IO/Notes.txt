@@ -1,0 +1,37 @@
+
+
+
+
+common IO sources
+
+    - standard input & output
+    - buffer
+    - file
+    - sockets
+
+ 8-bit => any type of data
+ 16-bit => character data
+
+ 2 types IO streams
+
+    - 8-bit-stream / byte-stream
+    - 16-bit-stream / character-stream
+
+ IO classes
+ --------------
+
+    InputStream
+    OutputStream
+
+    Reader
+    Writer
+
+    source : file
+
+    FileInputStream
+    FileOutputStream
+
+    FileReader
+    FileWriter
+
+

@@ -6,14 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="annotation-demo" />
+        <module name="IO" />
+        <module name="money-transfer-system" />
+        <module name="exception-handling" />
+        <module name="GC-demo" />
+        <module name="transfer-service" />
+        <module name="concurrency" />
         <module name="play-with-java" />
         <module name="pattern-matching" />
         <module name="shop-IT" />
-        <module name="exception-handling" />
+        <module name="streams-api" />
         <module name="FP-in-java" />
+        <module name="OO-concepts" />
         <module name="design-patterns" />
-        <module name="transfer-service" />
-        <module name="concurrency" />
       </profile>
     </annotationProcessing>
   </component>

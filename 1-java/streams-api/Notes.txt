@@ -1,0 +1,10 @@
+
+
+
+
+why we need streams api ?
+
+
+    => to build data-pipeline in declarative style
+       with Lambda function(s)
+

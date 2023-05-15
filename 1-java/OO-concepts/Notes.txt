@@ -1,0 +1,61 @@
+
+
+
+
+    object
+
+        => data,info,properties,attributes ==> state
+        => function,method,work            ==> behavior
+        => address,location,reference      ==> identity
+
+        obj => sbi
+
+    class
+        => state & behavior template for similar objects
+
+    ----------------------------------------------------------------
+    class ==> object(s)
+    ----------------------------------------------------------------
+
+
+
+    OO concepts
+
+    - Interface / Abstraction
+        why we need ?
+            => easy to use by dependent
+            => loose-coupling
+
+    - Implementation / Encapsulation
+        why we need ?
+            => hide complexity to dependent
+
+    - Inheritance
+        why we need ?
+            => re-use common state & behav from generalized-type ( interface | class)
+               to specialized-type ( interface | class )
+
+    - Polymorphism
+        why we need ?
+            => based on input/envi, do same behav in different way using same object
+
+
+
+    --------------------------------------------------------------------
+
+    java-module using OO concepts
+
+    Top-level : Interface          ( 100% abstraction of any obj-module )
+    Middle-Level : AbstractClass   ( Partial Abstraction / Implementation )
+    Bottom-Level : Implementation  ( Complete Implementation )
+
+
+    ----------------------------------------------------------------
+
+
+
+
+
+
+
+

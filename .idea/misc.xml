@@ -13,6 +13,12 @@
         <option value="$PROJECT_DIR$/1-java/FP-in-java/pom.xml" />
         <option value="$PROJECT_DIR$/1-java/concurrency/pom.xml" />
         <option value="$PROJECT_DIR$/1-java/pattern-matching/pom.xml" />
+        <option value="$PROJECT_DIR$/1-java/OO-concepts/pom.xml" />
+        <option value="$PROJECT_DIR$/1-java/annotation-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/1-java/streams-api/pom.xml" />
+        <option value="$PROJECT_DIR$/1-java/IO/pom.xml" />
+        <option value="$PROJECT_DIR$/1-java/GC-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/2-spring/money-transfer-system/pom.xml" />
       </list>
     </option>
   </component>
