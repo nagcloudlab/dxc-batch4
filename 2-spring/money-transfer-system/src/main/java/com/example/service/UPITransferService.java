@@ -32,9 +32,11 @@ public class UPITransferService implements TransferService {
         logger.info("transferLimit: " + transferLimit);
         // amount <= transferLimit
         // step-1 : Load source account
-        Account sourceAccount = accountRepository.loadAccount(source);
+        Account sourceAccount = accountRepository.findById(source)
+                .orElseThrow(() -> new RuntimeException("Source account not found"));
         // step-2 : Load destination account
-        Account destinationAccount = accountRepository.loadAccount(destination);
+        Account destinationAccount = accountRepository.findById(destination)
+                .orElseThrow(() -> new RuntimeException("Destination account not found"));
         // step-3 : debit & credit
         if(amount> sourceAccount.getBalance())
             throw new RuntimeException("Insufficient funds");
@@ -43,8 +45,8 @@ public class UPITransferService implements TransferService {
         logger.info("credit");
         destinationAccount.setBalance(destinationAccount.getBalance() + amount);
         // step-4 : Update source & destination accounts
-        accountRepository.updateAccount(sourceAccount);
-        accountRepository.updateAccount(destinationAccount);
+        accountRepository.save(sourceAccount);
+        accountRepository.save(destinationAccount);
         logger.info("transfer completed");
         return true;
     }

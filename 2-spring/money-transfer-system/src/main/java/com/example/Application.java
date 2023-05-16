@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.*;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
@@ -18,6 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages = {"com.example"})
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
+@EnableJpaRepositories
 public class Application {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
@@ -44,7 +46,7 @@ public class Application {
             TransferService transferService = applicationContext.getBean("upiTransferService", TransferService.class);
             System.out.println(transferService.getClass());
 
-            transferService.transfer(100.00, "1", "2");
+            transferService.transfer(100.00, "2", "1");
 
         } catch (RuntimeException e) {
             logger.error(e.getMessage());
