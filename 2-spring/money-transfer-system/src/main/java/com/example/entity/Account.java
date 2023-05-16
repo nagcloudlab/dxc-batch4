@@ -1,8 +1,17 @@
-package com.example.model;
+package com.example.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "accounts")
 public class Account {
 
+    @Id
     private String number;
+    @Column(name = "balanace")
     private double balance;
 
     public Account(String number, double balance) {
@@ -28,7 +37,6 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
 
     @Override
     public String toString() {

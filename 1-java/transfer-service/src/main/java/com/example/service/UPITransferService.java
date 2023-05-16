@@ -1,8 +1,7 @@
 package com.example.service;
 
-import com.example.model.Account;
+import com.example.entity.Account;
 import com.example.repository.AccountRepository;
-import com.example.repository.AccountRepositoryFactory;
 import org.apache.log4j.Logger;
 
 /**

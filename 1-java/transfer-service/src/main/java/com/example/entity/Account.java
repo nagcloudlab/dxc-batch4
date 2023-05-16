@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.entity;
 
 public class Account {
 
@@ -28,6 +28,7 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
 
     @Override
     public String toString() {

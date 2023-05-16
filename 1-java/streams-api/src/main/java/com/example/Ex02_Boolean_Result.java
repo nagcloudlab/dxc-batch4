@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.model.Dish;
+import com.example.entity.Dish;
 
 import java.util.List;
 

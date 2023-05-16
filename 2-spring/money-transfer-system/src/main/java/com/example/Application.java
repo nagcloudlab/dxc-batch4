@@ -1,7 +1,7 @@
 package com.example;
 
 import com.example.config.DataSourceConfiguration;
-import com.example.config.JdbcConfiguration;
+import com.example.config.JpaConfiguration;
 import com.example.service.TransferService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @Import({
         DataSourceConfiguration.class,
-        JdbcConfiguration.class
+        JpaConfiguration.class
 })
 @ComponentScan(basePackages = {"com.example"})
 @EnableAspectJAutoProxy

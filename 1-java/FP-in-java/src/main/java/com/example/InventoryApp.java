@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.model.Apple;
+import com.example.entity.Apple;
 
 import java.util.ArrayList;
 import java.util.List;

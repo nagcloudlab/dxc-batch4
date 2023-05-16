@@ -1,6 +1,6 @@
 package com.example.repository;
 
-import com.example.model.Account;
+import com.example.entity.Account;
 
 public class MongoAccountRepository implements AccountRepository{
     @Override

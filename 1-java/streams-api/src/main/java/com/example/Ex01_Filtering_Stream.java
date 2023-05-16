@@ -1,10 +1,9 @@
 package com.example;
 
-import com.example.model.Dish;
-import com.example.model.Employee;
+import com.example.entity.Dish;
+import com.example.entity.Employee;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
