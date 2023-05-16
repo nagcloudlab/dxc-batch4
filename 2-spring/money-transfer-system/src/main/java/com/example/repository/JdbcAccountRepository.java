@@ -4,6 +4,7 @@ import com.example.model.Account;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -18,32 +19,19 @@ public class JdbcAccountRepository implements AccountRepository {
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(JdbcAccountRepository.class);
 
     @Autowired
-    private DataSource dataSource;
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public Account loadAccount(String number) {
         logger.info("loadAccount: {}", number);
-        Connection connection = null;
-        try {
-            connection = dataSource.getConnection();
-            logger.info("connection with mysql-server success");
-        } catch (Exception e) {
-            logger.error(e.getMessage(), e);
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (Exception e) {
-                    logger.error(e.getMessage(), e);
-                }
-            }
-        }
-        return new Account(number, 1000.00);
+        return jdbcTemplate.queryForObject("select * from accounts where number=?", (rs, index) -> {
+            return new Account(rs.getString("number"), rs.getDouble("balanace"));
+        }, number);
     }
 
     @Override
-    public void saveAccount(Account account) {
+    public void updateAccount(Account account) {
         logger.info("saveAccount: {}", account.getNumber());
-        //..
+        jdbcTemplate.update("update accounts set balanace=? where number=?", account.getBalance(), account.getNumber());
     }
 }

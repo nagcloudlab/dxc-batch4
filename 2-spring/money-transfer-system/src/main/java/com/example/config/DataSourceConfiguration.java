@@ -2,16 +2,13 @@ package com.example.config;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"com.example"})
-@EnableAspectJAutoProxy
-public class MoneyTransferServiceConfiguration {
+public class DataSourceConfiguration {
+
 
     @Bean("dataSource")
     public DataSource dataSource() {

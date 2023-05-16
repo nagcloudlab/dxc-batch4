@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 //@Component("upiTransferService")
 @Service("upiTransferService")
@@ -23,6 +24,7 @@ public class UPITransferService implements TransferService {
         logger.info("UPITransferService created");
     }
 
+    @Transactional
     @Override
     public boolean transfer(double amount, String source, String destination) {
         logger.info("transfer initiated");
@@ -38,8 +40,8 @@ public class UPITransferService implements TransferService {
         logger.info("credit");
         destinationAccount.setBalance(destinationAccount.getBalance() + amount);
         // step-4 : Update source & destination accounts
-        accountRepository.saveAccount(sourceAccount);
-        accountRepository.saveAccount(destinationAccount);
+        accountRepository.updateAccount(sourceAccount);
+        accountRepository.updateAccount(destinationAccount);
         logger.info("transfer completed");
         return true;
     }
