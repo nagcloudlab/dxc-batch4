@@ -1,19 +1,20 @@
 package com.example;
 
-import com.example.config.DataSourceConfiguration;
-import com.example.config.JpaConfiguration;
 import com.example.service.TransferService;
+import org.dxc.config.DxcAutoConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@Import({
-        DataSourceConfiguration.class,
-        JpaConfiguration.class
-})
+//@Import({
+//        DxcAutoConfiguration.class
+//})
+@EnableAutoConfiguration
 @ComponentScan(basePackages = {"com.example"})
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
@@ -29,12 +30,15 @@ public class Application {
         logger.info("-".repeat(100));
 
         ConfigurableApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(Application.class);
+                SpringApplication.run(Application.class, args);
 
         logger.info("-".repeat(100));
         //------------------------------------------------------
         // User phase
         //------------------------------------------------------
+
+//        String dxcIndia = applicationContext.getBean("dxcIndia", String.class);
+//        System.out.println(dxcIndia);
 
         try {
             TransferService transferService = applicationContext.getBean("upiTransferService", TransferService.class);

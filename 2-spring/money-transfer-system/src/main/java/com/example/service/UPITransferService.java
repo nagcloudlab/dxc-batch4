@@ -5,6 +5,7 @@ import com.example.repository.AccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,6 +15,9 @@ public class UPITransferService implements TransferService {
 
     private static final Logger logger = LoggerFactory.getLogger(TransferService.class);
     private final AccountRepository accountRepository;
+
+    @Value("${transfer.limit: 1000.00}")
+    private double transferLimit;
 
     @Autowired
     public UPITransferService(AccountRepository accountRepository) {
@@ -25,6 +29,8 @@ public class UPITransferService implements TransferService {
     @Override
     public boolean transfer(double amount, String source, String destination) {
         logger.info("transfer initiated");
+        logger.info("transferLimit: " + transferLimit);
+        // amount <= transferLimit
         // step-1 : Load source account
         Account sourceAccount = accountRepository.loadAccount(source);
         // step-2 : Load destination account
