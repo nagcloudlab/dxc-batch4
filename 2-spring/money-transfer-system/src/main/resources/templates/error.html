@@ -15,8 +15,9 @@
         <div class="display-1">Money Transfer System</div>
         <hr />
 
-        <div class="alert alert-info">
-            <strong>Transfer Status:</strong> ???
+        <div class="alert alert-danger">
+            <strong>Warning:</strong>
+            <span th:text="${exception.message}"></span>
         </div>
 
     </div>

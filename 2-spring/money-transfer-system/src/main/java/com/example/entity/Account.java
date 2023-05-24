@@ -17,6 +17,8 @@ import lombok.NoArgsConstructor;
 public class Account {
     @Id
     private String number;
-    @Column(name = "balanace")
     private double balance;
+
+
+
 }
