@@ -1,2 +1,12 @@
-package com.example.controller.dto;public class TransferRequest {
+package com.example.controller.dto;
+
+import lombok.Data;
+
+@Data
+public class TransferRequest {
+
+    private String fromAccountNumber;
+    private String toAccountNumber;
+    private double amount;
+
 }

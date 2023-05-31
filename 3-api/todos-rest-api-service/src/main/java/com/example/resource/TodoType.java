@@ -1,2 +1,5 @@
-package com.example.resource;public enum TodoType {
+package com.example.resource;
+
+public enum TodoType {
+    WORK, HOME, HOBBY
 }
