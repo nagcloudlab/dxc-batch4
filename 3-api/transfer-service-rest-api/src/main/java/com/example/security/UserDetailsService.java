@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.security;
 
 import com.example.entity.User;
 import com.example.repository.UserRepository;
@@ -21,8 +21,7 @@ public class UserDetailsService implements org.springframework.security.core.use
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User userEntity = userRepository.findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("User not found with email : " + username));
         List<SimpleGrantedAuthority> roles = userEntity.getRoles().stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
-        UserDetails userDetails = new org.springframework.security.core.userdetails.User(userEntity.getEmail(), userEntity.getPassword(), roles);
-        return userDetails;
+        return new org.springframework.security.core.userdetails.User(userEntity.getEmail(), userEntity.getPassword(), roles);
     }
 
 

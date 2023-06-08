@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.entity.Account;
 import com.example.entity.Role;
 import com.example.entity.User;
 import com.example.repository.AccountRepository;
@@ -24,9 +25,14 @@ public class MoneyTransferSystemApplication {
 	private RoleRepository roleRepository;
 	@Autowired
 	private UserRepository userRepository;
+	@Autowired
+	private AccountRepository accountRepository;
 
 //	@EventListener(ApplicationStartedEvent.class)
 //	public void  dbInit(){
+//
+//		accountRepository.save(new Account("1",1000.00));
+//		accountRepository.save(new Account("2",1000.00));
 //
 //		Role adminRole=roleRepository.save(new Role("ROLE_ADMIN"));
 //		Role userRole=roleRepository.save(new Role("ROLE_USER"));
@@ -36,6 +42,9 @@ public class MoneyTransferSystemApplication {
 //
 //		userRepository.save(user1);
 //		userRepository.save(user2);
+//
+//
+//
 //
 //	}
 
