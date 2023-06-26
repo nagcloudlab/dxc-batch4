@@ -1,0 +1,128 @@
+
+1. What makes Web-UI
+
+ 
+ UI = data + style + behavior
+ Web-UI = HTML + CSS + JavaScript
+
+
+ static Web-UI = HTML + CSS 
+ dynamic Web-UI = HTML + CSS + JavaScript
+
+
+
+why do we need JavaScript to HTML page ?
+
+    using browser provided apis, 
+    javascript programs can do any dynamic actions on HTMLpage
+
+    browser apis ==> w3c recommendations, implemented natively by browsers
+
+    Using DOM API
+    ---------------
+     -> can change element's inner content
+     -> can change element's style
+     -> can change element's attributes/properties
+     -> can listen events on element(s) then react
+     -> can validate form-field before submit
+     -> can create rich ui components like calendar,auto-complete fields...
+
+    Using Timer API
+    -------------------
+     -> can perform any actions on timeout/time-interval
+
+     Using XHR / Fetch API
+     -------------------------    
+     -> can send HTTP-request async to api-server.
+
+-----------------------------------------------------------------------    
+
+To be front-end developer ,
+
+You must know,
+
+    => HTML + CSS + JavaScript + ( Browser Apis )
+
+-----------------------------------------------------------------------
+
+
+Challanges while developing Web-UI using plain-javascript code with browser-Apis?
+
+-> browser compatability issues
+-> performance issues should handle manually
+-> memory issues should handle manually
+-> data-binding should handle manually
+-> too much code
+-> no re-usable functions
+
+
+Legacy Solution(s)
+
+-> Using server-side page technologies
+
+    e.g Java => JSP, freemarker, thymeleaf
+        .Net => ASP.NET
+        PHP
+
+limitations on server-side pages
+
+ -> on very request, server-side need construct page keeping client's state
+ -> increase n/w bandwidth & latency
+ -> on every response, browser re-loads page
+
+
+ Modern Solution(s)
+
+ -> build dynamic web page in browser side
+
+ How ?
+
+    -> Use Advanced javascript concepts
+    -> Modern Browser(s)
+
+    +
+
+    -> third-party's JavaScript libraries & frameworks ( Someone's JavaScript code )
+
+
+
+third-party's libraries and frameworks
+
+
+1. jquery.js => DOM & XHR utility libraries
+
+
+MVC pattern based libraries & frameworks
+
+2. backbone.js
+3. knockout.js
+4. Ember.js
+5. Dojo
+6. Ext.JS from sencha ( commercial )
+7. Angular.js from google team
+...
+
+component pattern based libraries & frameworks
+
+8. react.js from facebook-team
+9. angular from google-team      
+10. Vue.js
+...
+
+---------------------------------------------------------------
+
+- HTML
+- CSS
+- Javascript
+
+---------------------------------------------------------------
+
+javascript related Q?
+
+
+
+
+
+
+
+

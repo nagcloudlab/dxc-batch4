@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="display-1">{{title}}</div>
+  <hr/>
+
+  <div class="list-group">
+    <div *ngFor="let product of products">
+      <div *ngIf="product.isAvailable" class="list-group-item">
+        <div class="row">
+          <div class="col-4">
+            <img [src]="product.imagePath" alt="" class="img-fluid">
+          </div>
+          <div class="col-8">
+            <div>{{product.name}}</div>
+            <div>{{product.price}}</div>
+            <div>{{product.description}}</div>
+            <button class="btn btn-primary">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

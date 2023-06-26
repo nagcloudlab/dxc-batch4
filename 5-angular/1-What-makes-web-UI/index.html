@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web UI</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="display-1">Web UI</div>
+        <hr />
+        <div class="d-flex">
+            <button id="top5-todos" class="btn btn-dark">Top Five Todos</button>
+            <select class="form-control">
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+            </select>
+            <input class="form-control" />
+        </div>
+        <hr />
+        <table class="table">
+            <tbody id="todos">
+
+            </tbody>
+        </table>
+        <hr />
+        <div class="display-4">
+            <span id="time-now"></span>
+        </div>
+        <hr />
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Welcome</h4>
+                <p class="card-text">To Web UI wolrd</p>
+            </div>
+        </div>
+        <hr />
+        <button class="btn btn-primary">greet me</button>
+        <button class="btn btn-danger">hide</button>
+        <button class="btn btn-success">show</button>
+        <hr />
+    </div>
+
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
