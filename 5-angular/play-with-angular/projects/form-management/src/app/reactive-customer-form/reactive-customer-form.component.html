@@ -1,0 +1,130 @@
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">Customer Form</div>
+      <div class="card-body">
+        <form [formGroup]="customerForm" (submit)="handleSubmit($event)">
+          <div>
+            <label>FirstName</label>
+            <input autofocus type="text"
+                   class="form-control"
+                   formControlName="firstName"
+                   required
+                   minlength="3"
+            >
+            <div class="text-danger">
+              <div *ngIf="customerForm.controls['firstName'].invalid && customerForm.controls['firstName'].touched">
+                <div *ngIf="customerForm.controls['firstName'].errors?.['required']">
+                  First name is required
+                </div>
+                <div *ngIf="customerForm.controls['firstName'].errors?.['minlength']">
+                  First name must be at least 3 characters
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label>LastName</label>
+            <input type="text"
+                   class="form-control"
+                   formControlName="lastName"
+            >
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="text"
+                   class="form-control"
+                   formControlName="email"
+            >
+          </div>
+          <div>
+            <label>Mobile</label>
+            <input type="text"
+                   class="form-control"
+                   formControlName="mobile"
+            >
+          </div>
+          <div>
+            <label>NotificationType</label>
+            <br/>
+            <input type="radio"
+                   formControlName="notiType"
+                   value="email"
+            > Email
+            <input type="radio"
+                   formControlName="notiType"
+                   value="text"
+            > Text
+          </div>
+          <hr/>
+          <button (click)="handleNewAddress()">Add New Address</button>
+          <hr/>
+            <div formArrayName="addressFormArray">
+              <div class="card"
+                   *ngFor="let group of addressFormArray.controls;let i=index">
+               <ng-container [formGroup]="getFormGroup(group)">
+                 <div class="card-body">
+                   <div>
+                     <label>City</label>
+                     <input type="text"
+                            class="form-control"
+                            formControlName="city"
+                     >
+                   </div>
+                   <div>
+                     <label>Country</label>
+                     <input type="text"
+                            class="form-control"
+                            formControlName="country"
+                     >
+                   </div>
+                 </div>
+               </ng-container>
+              </div>
+            </div>
+          <hr/>
+          <button class="btn btn-primary">Submit</button>
+          <hr/>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+
+    <hr/>
+    FormGroup
+    <hr/>
+
+    <pre>
+      is pristine : {{customerForm.pristine}}
+      is dirty    : {{customerForm.dirty}}
+      is untouched: {{customerForm.untouched}}
+      is touched  : {{customerForm.touched}}
+      is valid    : {{customerForm.valid}}
+      is invalid  : {{customerForm.invalid}}
+    </pre>
+
+
+    <hr/>
+    Form Control ( e.g firstName )
+    <hr/>
+    <pre>
+      is pristine  : {{customerForm.controls['firstName'].pristine}}
+      is dirty     : {{customerForm.controls['firstName'].dirty}}
+      is untouched : {{customerForm.controls['firstName'].untouched}}
+      is touched   : {{customerForm.controls['firstName'].touched}}
+      is valid     : {{customerForm.controls['firstName'].valid}}
+      is invalid   : {{customerForm.controls['firstName'].invalid}}
+    </pre>
+
+    <hr/>
+    Form Model
+    <hr/>
+    <pre>
+      {{customerForm.value|json}}
+      <hr/>
+      {{customerForm.controls['email'].errors|json}}
+    </pre>
+
+  </div>
+</div>

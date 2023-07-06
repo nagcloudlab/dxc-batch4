@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: products-service
+          uri: http://localhost:7001/api/products
+          predicates:
+            - Path=/api/products/**
+        - id: reviews-service
+          uri: http://localhost:7002/api/reviews
+          predicates:
+            - Path=/api/reviews/**
