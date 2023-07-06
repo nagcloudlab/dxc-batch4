@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">Review Form</div>
+      <div class="card-body">
+        <form [formGroup]="reviewForm" (submit)="handeSubmit()">
+          <div>
+            <label>Author</label>
+            <input autofocus type="text"
+                   class="form-control"
+                   formControlName="author">
+          </div>
+          <div >
+            <label>Rating</label>
+            <select class="form-control" formControlName="rating">
+              <option *ngFor="let n of [1,2,3,4,5]" [value]="n">{{n}}</option>
+            </select>
+          </div>
+          <div >
+            <label>Body</label>
+            <textarea class="form-control" formControlName="body"></textarea>
+          </div>
+          <hr/>
+          <button class="btn btn-primary">Submit</button>
+          <hr/>
+        </form>
+      </div>
+    </div>
+  </div>
