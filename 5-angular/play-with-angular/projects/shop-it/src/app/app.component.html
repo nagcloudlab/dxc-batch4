@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <app-header [title]="title"></app-header>
+      <app-cart-badge></app-cart-badge>
+      <hr/>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+      </ul>
+      <hr/>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

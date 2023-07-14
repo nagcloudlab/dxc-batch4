@@ -1,0 +1,16 @@
+
+
+<div class="card item">
+  <div class="card-body">
+    <div class="display-5">{{value}}</div>
+    <hr/>
+    <div class="d-flex justify-content-around">
+      <button (click)="handleLike($event)" type="button" class="btn btn-sm btn-primary">
+        Like
+      </button>
+      <button (click)="handleDislike($event)" type="button" class="btn btn-sm btn-danger">
+        Dislike
+      </button>
+    </div>
+  </div>
+</div>
