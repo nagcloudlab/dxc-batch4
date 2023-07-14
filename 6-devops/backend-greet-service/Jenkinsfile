@@ -9,5 +9,19 @@ pipeline {
                 }
             }
         }
+        stage('Docker build') {
+            steps {
+                dir('6-devops/backend-greet-service'){
+                    sh 'docker build -t nagabhushanamn/backend-greet-service:latest'
+                }
+            }
+        }
+        stage('Docker push i.e CD') {
+            steps {
+                dir('6-devops/backend-greet-service'){
+                    sh 'docker push nagabhushanamn/backend-greet-service:latest'
+                }
+            }
+        }
     }
 }
