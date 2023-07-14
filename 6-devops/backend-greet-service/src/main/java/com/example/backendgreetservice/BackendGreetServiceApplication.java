@@ -11,7 +11,7 @@ public class BackendGreetServiceApplication {
 
 	@GetMapping("/api/greet")
 	public String greet() {
-        return "Hello DXC";
+        return "Hello DXC!";
     }
 
 	public static void main(String[] args) {
