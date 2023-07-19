@@ -1,0 +1,29 @@
+version: '2.1'
+
+services:
+  todos:
+    image: todos-service
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/todosdb
+    depends_on:
+      mongo:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+
+
+  mongo:
+    image: mongo:4.4.2
+    restart: always
+    mem_limit: 512m
+    ports:
+      - "27017:27017"
+    command: mongod
+    healthcheck:
+      test: "mongo --eval 'db.stats().ok'"
+      interval: 5s
+      timeout: 2s
+      retries: 60
+
+
+
