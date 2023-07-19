@@ -25,7 +25,7 @@ class BackendGreetServiceApplicationTests {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(String.class)
-                .isEqualTo("Hello DXC!");
+                .isEqualTo("Hello DXC!!!");
 
     }
 

@@ -26,6 +26,7 @@ pipeline {
         stage('K8s deploy i.e CD') {
             steps {
                 dir('6-devops/backend-greet-service'){
+                    sh 'kubectl delete deployments backend-greet-deploy'
                     sh 'kubectl apply -f k8s/backend-greet-service.yml'
                 }
             }
