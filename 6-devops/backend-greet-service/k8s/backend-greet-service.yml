@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend-greet-container
-        image: nagabhushanamn/backend-greet-service:latest:latest
+        image: nagabhushanamn/backend-greet-service:latest
         ports:
         - containerPort: 8080
 
