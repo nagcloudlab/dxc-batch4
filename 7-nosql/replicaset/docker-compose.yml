@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+
+  mongodb_server_1:
+    container_name: mongodb_server_1
+    image: mongo
+    command: mongod --replSet rs1 --port 27017 --dbpath /data/db
+    ports:
+      - 40001:27017
+    volumes:
+      - mongodb_server_1:/data/db
+
+  mongodb_server_2:
+    container_name: mongodb_server_2
+    image: mongo
+    command: mongod --replSet rs1 --port 27017 --dbpath /data/db
+    ports:
+      - 40002:27017
+    volumes:
+      - mongodb_server_2:/data/db
+
+  mongodb_server_3:
+    container_name: mongodb_server_3
+    image: mongo
+    command: mongod --replSet rs1 --port 27017 --dbpath /data/db
+    ports:
+      - 40003:27017
+    volumes:
+      - mongodb_server_3:/data/db
+
+volumes:
+  mongodb_server_1: {}
+  mongodb_server_2: {}
+  mongodb_server_3: {}

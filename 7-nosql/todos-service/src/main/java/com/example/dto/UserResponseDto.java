@@ -1,2 +1,9 @@
-package com.example.dto;public class UserResponseDto {
+package com.example.dto;
+
+import lombok.*;
+
+@Data
+public class UserResponseDto {
+    private String id;
+    private String name;
 }

@@ -1,10 +1,10 @@
-package com.example.springdatamongodbdemo;
+package com.example.todosservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDataMongodbDemoApplicationTests {
+class TodosServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
