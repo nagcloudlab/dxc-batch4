@@ -36,11 +36,16 @@ public class MongodbReplicasetDemoApplication {
         return args -> {
 
             new Thread(() -> {
-                int i = 4;
+                int i = 1;
                 while (true) {
+//                    try {
+//                        TimeUnit.SECONDS.sleep(1);
+//                    } catch (InterruptedException e) {
+//                        throw new RuntimeException(e);
+//                    }
                     i++;
                     Todo todo = new Todo();
-                    todo.setTitle("title" + i);
+                    todo.setTitle("Pre-splitting the chunk ranges in an empty sharded collection allows clients to insert data into an already partitioned collection. In most situations a sharded cluster will create and distribute chunks automatically without user intervention. However, in a limited number of cases, MongoDB cannot create enough chunks or distribute data fast enough to support required throughput. For example:" + i);
                     mongoTemplate.save(todo);
                 }
             }).start();

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6985e52d-c830-463c-8cf0-5d12f184df85" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../8-kafka/kafka-programming/src/main/java/com/example/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mongodb-replicaset-demo/src/main/java/com/example/mongodbreplicasetdemo/MongodbReplicasetDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mongodb-replicaset-demo/src/main/java/com/example/mongodbreplicasetdemo/MongodbReplicasetDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mongodb-replicaset-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../mongodb-replicaset-demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharding/00-setup-sharding-doc.md" beforeDir="false" afterPath="$PROJECT_DIR$/../sharding/00-setup-sharding-doc.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2TLQvQd198TLihbVmhl49qlLjDQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/nag/trainings/dxc-batch4/8-kafka/kafka-programming"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6985e52d-c830-463c-8cf0-5d12f184df85" name="Changes" comment="" />
+      <created>1690820111990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690820111990</updated>
+    </task>
+    <servers />
+  </component>
+</project>
